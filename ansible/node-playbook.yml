@@ -1,0 +1,6 @@
+- name: promethues node exporter 
+  hosts: all
+  tasks:
+
+     - name: install node exporter
+       script: node.sh
