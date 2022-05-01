@@ -1,6 +1,17 @@
 - name: promethues node exporter 
   hosts: all
+  remote_user: ubuntu
   tasks:
+    
+     - name: Copyx
+       copy:
+        src: ./node.sh
+        dest: /
+        mode: u=rwx
 
      - name: install node exporter
-       script: node.sh
+       script: ./node.sh
+
+
+
+    

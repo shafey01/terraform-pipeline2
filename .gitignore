@@ -1,2 +1,3 @@
 terraformkey.pem
 /.terraform
+/ansible
