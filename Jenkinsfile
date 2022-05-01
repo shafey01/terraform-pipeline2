@@ -50,19 +50,7 @@ pipeline {
             }
         }
 
-        stage('ansible install node exporter'){
-
-             environment {
-                 SSH_KEY = credentials('SSH_KEY')
-               
-           }
-
-
-            steps{
-                slackSend color: "#66ff99", message: "install node exporter"
-                 sh "ansible-playbook --private-key $SSH_KEY  ./ansible/node-playbook -vv"
-            }
-        }
+    
         
     
 
